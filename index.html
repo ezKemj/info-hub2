@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>信息枢纽</title>
+    <style>
+        body { font-family: Arial; max-width: 1200px; margin: 0 auto; }
+        .item { border-bottom: 1px solid #eee; padding: 10px; }
+        .category { display: inline-block; padding: 2px 8px; background: #f0f0f0; }
+        input { width: 100%; padding: 10px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>权威信息枢纽</h1>
+    <input type="text" id="search" placeholder="搜索...">
+    <div id="content"></div>
+    
+    <script>
+        fetch('data/feeds.json')
+            .then(r => r.json())
+            .then(data => {
+                displayItems(data);
+                setupSearch(data);
+            });
+    </script>
+</body>
+</html>
