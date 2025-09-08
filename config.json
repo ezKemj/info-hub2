@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "name": "国务院新闻",
+      "url": "http://www.gov.cn/rss/govall.xml",
+      "category": "政府",
+      "retention_days": 30
+    },
+    {
+      "name": "人民日报",
+      "url": "http://www.people.com.cn/rss/politics.xml",
+      "category": "媒体",
+      "retention_days": 7
+    }
+  ]
+}
